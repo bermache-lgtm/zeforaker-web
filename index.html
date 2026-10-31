@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zeforaker Service · Servicios Generales en Lima, Perú</title>
+<meta name="description" content="ZEFORAKER SERVICE: servicios generales para los sectores comercial, industrial y público. Obra civil, electricidad industrial, aire acondicionado, drywall, pintura, mantenimiento y más. Autorizados por el OSCE.">
+<meta property="og:title" content="Zeforaker Service · Servicios Generales">
+<meta property="og:description" content="Construimos, instalamos y mantenemos lo que hace funcionar tu empresa. Atención a nivel nacional.">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#071A3D">
+<link rel="icon" type="image/png" href="img/logo-zeforaker.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+html{scroll-behavior:smooth}
+a{color:#1E6FE0}a:hover{color:#0A2463}
+*{box-sizing:border-box}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-18px) rotate(2deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinrev{to{transform:rotate(-360deg)}}
+@keyframes drift{0%,100%{transform:translateX(0) skewX(-28deg)}50%{transform:translateX(-40px) skewX(-28deg)}}
+@keyframes drift2{0%,100%{transform:translateX(0) skewX(-28deg)}50%{transform:translateX(50px) skewX(-28deg)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}100%{box-shadow:0 0 0 22px rgba(37,211,102,0)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes dash{to{stroke-dashoffset:-40}}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+.in{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}.d5{animation-delay:.7s}
+.floaty{animation:floaty 6s ease-in-out infinite}
+.spin{animation:spin 28s linear infinite}
+.spinrev{animation:spinrev 40s linear infinite}
+.drift{animation:drift 9s ease-in-out infinite}
+.drift2{animation:drift2 11s ease-in-out infinite}
+.bob1{animation:bob 4.5s ease-in-out infinite}
+.bob2{animation:bob 5.5s ease-in-out .8s infinite}
+.bob3{animation:bob 5s ease-in-out 1.6s infinite}
+.track{animation:marquee 38s linear infinite}
+.track2{animation:marquee 30s linear infinite reverse}
+.pulse{animation:pulse 1.8s ease-out infinite}
+.flow{stroke-dasharray:6 6;animation:dash 1.4s linear infinite}
+.gridbg{background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:56px 56px}
+.svc{animation:pop .5s cubic-bezier(.2,.7,.2,1) both;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
+.svc:hover{transform:translateY(-8px);box-shadow:0 22px 44px -18px rgba(10,36,99,.35);border-color:#1E6FE0}
+.svc .ph{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.svc:hover .ph{transform:scale(1.08)}
+.svc .num{transition:color .35s}
+.svc:hover .num{color:#F5B83D}
+.zoomimg{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.zoomwrap:hover .zoomimg{transform:scale(1.06)}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,-1%)}}
+.kb{animation:kenburns 22s ease-in-out infinite alternate}
+.svc .bar{transition:width .45s cubic-bezier(.2,.7,.2,1)}
+.svc:hover .bar{width:100%}
+.lift{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,background .35s}
+.lift:hover{transform:translateY(-6px);box-shadow:0 18px 40px -20px rgba(10,36,99,.4)}
+.lift .ico{transition:transform .5s cubic-bezier(.2,.7,.2,1),background .35s,color .35s}
+.lift:hover .ico{transform:rotate(-8deg) scale(1.08);background:#1E6FE0;color:#FFFFFF}
+.btn{transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px -12px rgba(0,0,0,.45)}
+.navlink{text-decoration:none;position:relative}
+.navlink:hover{color:#1E6FE0}
+.tab{transition:background .25s,color .25s,border-color .25s,transform .25s}
+.tab:hover{transform:translateY(-2px)}
+.field{transition:border-color .2s,box-shadow .2s}
+.field:focus{outline:none;border-color:#1E6FE0;box-shadow:0 0 0 4px rgba(30,111,224,.18)}
+a:focus-visible,button:focus-visible{outline:3px solid #F5B83D;outline-offset:3px}
+@supports (animation-timeline: view()){
+.rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+}
+@media (prefers-reduced-motion: reduce){
+*,*::before,*::after{animation:none !important;transition:none !important}
+}
+
+.tab{font:inherit;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;border:1.5px solid #D5DEEC;cursor:pointer;min-height:44px;background:#FFFFFF;color:#0A2463}
+.tab.on{background:#0A2463;color:#FFFFFF;border-color:#0A2463}
+.svc[hidden]{display:none !important}
+</style>
+</head>
+<body>
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #0B1B3A; background: #FFFFFF; overflow-x: hidden; width: 100%;">
+
+<!-- NAV -->
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid #E3E9F3;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;">
+<a href="#inicio" style="display: flex; align-items: center; gap: 10px; text-decoration: none;" aria-label="Zeforaker Service, inicio">
+<img src="img/logo-zeforaker.png" alt="" style="width: 52px; height: 36px; object-fit: contain;">
+<span style="display: flex; flex-direction: column; line-height: 1;">
+<span style="font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 19px; letter-spacing: .02em; color: #0A2463;">ZEFORAKER</span>
+<span style="font-size: 10px; font-weight: 700; letter-spacing: .28em; color: #4F5F78; margin-top: 4px;">SERVICE</span>
+</span>
+</a>
+<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 26px; font-size: 15px; font-weight: 600;">
+<a class="navlink" href="#nosotros" style="color: #0B1B3A; padding: 10px 0;">Nosotros</a>
+<a class="navlink" href="#servicios" style="color: #0B1B3A; padding: 10px 0;">Servicios</a>
+<a class="navlink" href="#sectores" style="color: #0B1B3A; padding: 10px 0;">Sectores</a>
+<a class="navlink" href="#proceso" style="color: #0B1B3A; padding: 10px 0;">Proceso</a>
+<a class="btn" href="#contacto" style="background: #0A2463; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 999px; font-weight: 700;">Solicitar presupuesto</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" style="position: relative; background-color: #071A3D; color: #FFFFFF; overflow: hidden;">
+<img class="kb" src="img/hero.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .38;">
+<div class="gridbg" aria-hidden="true" style="position: absolute; inset: 0; background-color: rgba(7,26,61,.55);"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,26,61,.92) 0%, rgba(7,26,61,.55) 60%, rgba(7,26,61,.3) 100%);"></div>
+<div class="drift" aria-hidden="true" style="position: absolute; top: -60px; right: -120px; width: 420px; height: 260px; background: #1E6FE0; opacity: .9;"></div>
+<div class="drift2" aria-hidden="true" style="position: absolute; top: 150px; right: -200px; width: 380px; height: 70px; background: #0F3F8C;"></div>
+<div class="drift2" aria-hidden="true" style="position: absolute; bottom: 40px; left: -160px; width: 360px; height: 120px; background: #0F3F8C; opacity: .8;"></div>
+<div class="drift" aria-hidden="true" style="position: absolute; bottom: 150px; left: -80px; width: 160px; height: 36px; background: #1E6FE0; opacity: .6;"></div>
+
+<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 56px 24px 108px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px;">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+<div class="in d1" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; padding: 8px 16px 8px 8px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(255,255,255,.06); font-size: 13px; font-weight: 600; color: #DCE7FA;">
+<span style="background: #F5B83D; color: #071A3D; font-weight: 800; padding: 4px 10px; border-radius: 999px; font-size: 12px;">OSCE</span>
+Autorizados para contratar con el Estado
+</div>
+<h1 class="in d2" style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: clamp(36px, 4.4vw, 60px); line-height: 1.04; letter-spacing: -.02em;">Hacemos <span style="color: #F5B83D;">funcionar</span><br>tu empresa.</h1>
+<p class="in d3" style="margin: 0; font-size: 17px; line-height: 1.6; color: #B9CBEA; max-width: 540px;">Servicios generales para los sectores comercial, industrial y público: obra civil, arquitectura y diseño, expedientes técnicos, instalaciones y mantenimiento integral, a nivel nacional.</p>
+<div class="in d4" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 6px;">
+<a class="btn" href="#contacto" style="display: inline-flex; align-items: center; gap: 10px; background: #F5B83D; color: #071A3D; text-decoration: none; font-weight: 800; font-size: 16px; padding: 17px 28px; border-radius: 14px;">Pedir presupuesto
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 5l7 7-7 7"></path></svg>
+</a>
+<a class="btn" href="#servicios" style="display: inline-flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 16px; padding: 16px 26px; border-radius: 14px; border: 1.5px solid rgba(255,255,255,.35);">Ver servicios</a>
+</div>
+<div class="in d5" style="display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 14px; font-size: 14px; font-weight: 600; color: #DCE7FA;">
+<span style="display: inline-flex; align-items: center; gap: 8px;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5FA0FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Cobertura nacional</span>
+<span style="display: inline-flex; align-items: center; gap: 8px;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5FA0FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Arquitecto e ingenieros</span>
+<span style="display: inline-flex; align-items: center; gap: 8px;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5FA0FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Normas de seguridad</span>
+</div>
+</div>
+
+<div class="in d3" style="flex: 1 1 380px; min-width: 0; display: flex; justify-content: center;">
+<div style="position: relative; width: 360px; max-width: 100%; aspect-ratio: 1 / 1;">
+<svg class="spin" aria-hidden="true" viewBox="0 0 400 400" style="position: absolute; inset: 0; width: 100%; height: 100%;"><circle cx="200" cy="200" r="192" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5" stroke-dasharray="4 10"></circle><circle cx="200" cy="8" r="7" fill="#F5B83D"></circle></svg>
+<svg class="spinrev" aria-hidden="true" viewBox="0 0 400 400" style="position: absolute; inset: 11%; width: 78%; height: 78%;"><circle cx="200" cy="200" r="190" fill="none" stroke="rgba(95,160,255,.45)" stroke-width="2" stroke-dasharray="80 30"></circle><circle cx="390" cy="200" r="8" fill="#5FA0FF"></circle></svg>
+<div aria-hidden="true" style="position: absolute; inset: 19%; border-radius: 50%; background: rgba(255,255,255,.9); border: 6px solid rgba(255,255,255,.35); background-clip: padding-box; box-shadow: 0 0 80px 14px rgba(95,160,255,.35), 0 30px 60px -20px rgba(0,0,0,.5);"></div>
+<div class="floaty" style="position: absolute; inset: 25%; display: flex; align-items: center; justify-content: center;">
+<img src="img/logo-zeforaker.png" alt="Logotipo de Zeforaker Service" style="width: 90%; height: auto; filter: drop-shadow(0 12px 16px rgba(10,36,99,.25));">
+</div>
+<div class="bob1" style="position: absolute; top: 9%; left: -4%; background: #FFFFFF; color: #0A2463; font-weight: 800; font-size: 13px; padding: 10px 14px; border-radius: 12px; box-shadow: 0 16px 30px -14px rgba(0,0,0,.5); display: flex; align-items: center; gap: 8px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: #1E6FE0;"></span>Obra civil</div>
+<div class="bob2" style="position: absolute; top: 46%; right: -8%; background: #F5B83D; color: #071A3D; font-weight: 800; font-size: 13px; padding: 10px 14px; border-radius: 12px; box-shadow: 0 16px 30px -14px rgba(0,0,0,.5);">Electricidad industrial</div>
+<div class="bob3" style="position: absolute; bottom: 6%; left: 4%; background: #FFFFFF; color: #0A2463; font-weight: 800; font-size: 13px; padding: 10px 14px; border-radius: 12px; box-shadow: 0 16px 30px -14px rgba(0,0,0,.5); display: flex; align-items: center; gap: 8px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: #F5B83D;"></span>Mantenimiento integral</div>
+</div>
+</div>
+</div>
+
+<!-- tilted marquee -->
+<div style="position: absolute; left: 0; right: 0; bottom: 0; background: #F5B83D; color: #071A3D; overflow: hidden; padding: 16px 0;">
+<div class="track" style="display: flex; width: max-content; gap: 40px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap;">
+<span style="display: inline-flex; align-items: center; gap: 40px;">Ejecución de proyectos<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Obra civil<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Arquitectura y diseño<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Expedientes técnicos<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Planos<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Estructuras<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Modificaciones<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Asesoría integral<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Ejecución de proyectos<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Obra civil<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Arquitectura y diseño<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Expedientes técnicos<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Planos<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Estructuras<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Modificaciones<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px;">Asesoría integral<span aria-hidden="true" style="font-size: 14px;">◆</span></span>
+
+</div>
+</div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+<div class="rv" style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: .2em; color: #1E6FE0;">SERVICIOS GENERALES · NOSOTROS</span>
+<h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -.02em;"><span style="color: #111111;">Quiénes <span style="color: #1E6FE0;">somos</span></span></h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3E4E68;">Atendemos la demanda de los sectores comercial e industrial en la ejecución de proyectos, obra civil, arquitectura y diseño, expedientes técnicos, planos, estructuras, modificaciones y asesoría integral para las diferentes actividades económicas, a nivel nacional.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3E4E68;">Contamos con arquitecto, ingenieros y técnicos especializados que supervisan cada trabajo para optimizar tiempos y calidad. Planificamos nuestros servicios con las autorizaciones, normas de seguridad, procedimientos y protocolos que establece el marco legal vigente.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px;">
+<span style="display: inline-flex; align-items: center; gap: 8px; background: #EAF2FE; color: #0A2463; font-weight: 700; font-size: 14px; padding: 10px 16px; border-radius: 999px;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E6FE0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Sector privado</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; background: #EAF2FE; color: #0A2463; font-weight: 700; font-size: 14px; padding: 10px 16px; border-radius: 999px;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E6FE0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Sector público (OSCE)</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; background: #EAF2FE; color: #0A2463; font-weight: 700; font-size: 14px; padding: 10px 16px; border-radius: 999px;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E6FE0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Cobertura nacional</span>
+</div>
+</div>
+
+<div class="rv" style="flex: 1 1 420px; min-width: 0;">
+<div class="zoomwrap" style="position: relative; height: 400px; border-radius: 28px; overflow: hidden;">
+<img class="zoomimg" src="img/equipo.jpg" alt="Equipo de trabajo con casco y chaleco en una obra" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+</div>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section aria-label="Datos clave" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 48px 24px 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+<div class="rv lift" style="border: 1px solid #E3E9F3; border-radius: 20px; padding: 26px 24px; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 46px; color: #0A2463; line-height: 1;">18</span>
+<span style="font-size: 15px; font-weight: 600; color: #4F5F78;">servicios especializados</span>
+</div>
+<div class="rv lift" style="border: 1px solid #E3E9F3; border-radius: 20px; padding: 26px 24px; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 46px; color: #0A2463; line-height: 1;">Perú</span>
+<span style="font-size: 15px; font-weight: 600; color: #4F5F78;">atención a nivel nacional</span>
+</div>
+<div class="rv lift" style="border: 1px solid #E3E9F3; border-radius: 20px; padding: 26px 24px; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 46px; color: #0A2463; line-height: 1;">OSCE</span>
+<span style="font-size: 15px; font-weight: 600; color: #4F5F78;">habilitados para el sector público</span>
+</div>
+<div class="rv lift" style="border: 1px solid #E3E9F3; border-radius: 20px; padding: 26px 24px; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 46px; color: #0A2463; line-height: 1;">3</span>
+<span style="font-size: 15px; font-weight: 600; color: #4F5F78;">líneas de atención por WhatsApp</span>
+</div>
+</div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" style="background: #F3F6FB;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px; display: flex; flex-direction: column; gap: 28px;">
+<div class="rv" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px;">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: .2em; color: #1E6FE0;">18 ESPECIALIDADES</span>
+<h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -.02em;"><span style="color: #111111;">Nuestros <span style="color: #1E6FE0;">servicios</span></span></h2>
+</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4F5F78; max-width: 380px;">Y cualquier otro servicio relacionado con nuestra actividad. Cuéntanos tu requerimiento y lo evaluamos.</p>
+</div>
+
+<div role="tablist" aria-label="Filtrar servicios por categoría" class="rv" style="display: flex; flex-wrap: wrap; gap: 10px;">
+<button type="button" class="tab on" role="tab" aria-selected="true" data-cat="Todos">Todos <span style="opacity: .7; font-weight: 600;">(18)</span></button>
+<button type="button" class="tab" role="tab" aria-selected="false" data-cat="Construcción">Construcción <span style="opacity: .7; font-weight: 600;">(7)</span></button>
+<button type="button" class="tab" role="tab" aria-selected="false" data-cat="Instalaciones">Instalaciones <span style="opacity: .7; font-weight: 600;">(3)</span></button>
+<button type="button" class="tab" role="tab" aria-selected="false" data-cat="Mantenimiento">Mantenimiento <span style="opacity: .7; font-weight: 600;">(4)</span></button>
+<button type="button" class="tab" role="tab" aria-selected="false" data-cat="Limpieza y entorno">Limpieza y entorno <span style="opacity: .7; font-weight: 600;">(4)</span></button>
+
+</div>
+
+<div id="grid-servicios" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 24px;">
+<article class="svc" data-cat="Construcción" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/tiendas.jpg" alt="Remodelación de tiendas" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">01</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Construcción</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Remodelación de tiendas</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Renovación integral de locales comerciales y espacios de atención.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Instalaciones" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/electricidad.jpg" alt="Electricidad industrial" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">02</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Instalaciones</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Electricidad industrial</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Instalaciones, tableros y redes eléctricas para plantas y edificios.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Instalaciones" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/aire.jpg" alt="Aire acondicionado" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">03</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Instalaciones</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Aire acondicionado</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Instalación y mantenimiento de sistemas de climatización.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Construcción" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/metal.jpg" alt="Estructuras metálicas" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">04</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Construcción</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Estructuras metálicas</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Fabricación y montaje de estructuras en acero.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Construcción" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/albanileria.jpg" alt="Albañilería y acabados enchapados" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">05</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Construcción</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Albañilería y acabados enchapados</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Obra civil, muros, pisos y enchapes de acabado fino.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Mantenimiento" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/piscina.jpg" alt="Mantenimiento de piscinas" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">06</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Mantenimiento</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Mantenimiento de piscinas</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Limpieza, tratamiento y puesta a punto de piscinas.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Mantenimiento" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/extintor.jpg" alt="Recarga de extintores" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">07</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Mantenimiento</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Recarga de extintores</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Recarga y control de extintores para tu local.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Limpieza y entorno" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/fumigacion.jpg" alt="Fumigación" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">08</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Limpieza y entorno</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Fumigación</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Control de plagas en oficinas, almacenes y viviendas.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Mantenimiento" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/bombas.jpg" alt="Mantenimiento de bombas y limpieza de tanques" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">09</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Mantenimiento</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Mantenimiento de bombas y limpieza de tanques</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Servicio a electrobombas, cisternas y tanques elevados.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Instalaciones" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/sanitarias.jpg" alt="Instalaciones sanitarias" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">10</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Instalaciones</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Instalaciones sanitarias</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Redes de agua, desagüe y aparatos sanitarios.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Construcción" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/drywall.jpg" alt="Sistemas drywall" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">11</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Construcción</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Sistemas drywall</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Tabiques, cielos rasos y divisiones en drywall.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Construcción" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/carpinteria.jpg" alt="Carpintería, tabiquería y estructuras" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">12</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Construcción</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Carpintería, tabiquería y estructuras</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Trabajos en madera, divisiones y estructuras a medida.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Construcción" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/melamine.jpg" alt="Fabricación de muebles en melamine" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">13</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Construcción</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Fabricación de muebles en melamine</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Muebles a medida para oficinas, tiendas y hogares.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Construcción" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/pintura.jpg" alt="Pintura en general" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">14</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Construcción</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Pintura en general</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Pintura de interiores, fachadas e instalaciones.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Mantenimiento" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/vias.jpg" alt="Mantenimiento y señalización de vías" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">15</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Mantenimiento</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Mantenimiento y señalización de vías</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Demarcación vial y mantenimiento de pistas y accesos.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Limpieza y entorno" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/techos.jpg" alt="Limpieza de techos y almacenes" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">16</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Limpieza y entorno</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Limpieza de techos y almacenes</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Limpieza de coberturas, techos y áreas de almacenaje.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Limpieza y entorno" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/jardin.jpg" alt="Jardinería y ornato" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">17</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Limpieza y entorno</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Jardinería y ornato</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Mantenimiento de áreas verdes y ornamentación.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+<article class="svc" data-cat="Limpieza y entorno" style="position: relative; background: #FFFFFF; border: 1px solid #E3E9F3; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden;">
+<div style="position: relative; height: 230px; overflow: hidden; background: #DCE7FA;">
+<img class="ph" loading="lazy" src="img/desmonte.jpg" alt="Transporte de desmonte" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0) 45%, rgba(7,26,61,.75) 100%);"></span>
+<span class="num" style="position: absolute; left: 18px; bottom: 10px; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: #FFFFFF;">18</span>
+<span style="position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0A2463; background: #FFFFFF; padding: 6px 10px; border-radius: 999px;">Limpieza y entorno</span>
+</div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.2; color: #0A2463;">Transporte de desmonte</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #4F5F78;">Retiro y traslado de desmonte y residuos de obra.</p>
+</div>
+<span class="bar" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; width: 48px; background: #1E6FE0;"></span>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- CAPACIDADES band -->
+<section aria-label="Capacidades" style="background: #0A2463; color: #FFFFFF; overflow: hidden; padding: 22px 0;">
+<div class="track2" style="display: flex; width: max-content; gap: 48px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: clamp(26px, 3.2vw, 40px); white-space: nowrap;">
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Ejecución de proyectos<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Obra civil<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Arquitectura y diseño<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Expedientes técnicos<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Planos<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Estructuras<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Modificaciones<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Asesoría integral<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Ejecución de proyectos<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Obra civil<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Arquitectura y diseño<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Expedientes técnicos<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Planos<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Estructuras<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Modificaciones<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 48px; color: #FFFFFF;">Asesoría integral<span aria-hidden="true" style="width: 14px; height: 14px; background: #1E6FE0; transform: rotate(45deg); display: inline-block;"></span></span>
+
+</div>
+</section>
+
+<!-- SECTORES -->
+<section id="sectores" style="background: #F3F6FB;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px; display: flex; flex-direction: column; gap: 32px;">
+<div class="rv" style="display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: .2em; color: #1E6FE0;">PÚBLICO Y PRIVADO</span>
+<h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -.02em;"><span style="color: #111111;">Sectores que <span style="color: #1E6FE0;">atendemos</span></span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4F5F78;">Contamos con autorización del Organismo Supervisor de las Contrataciones del Estado (OSCE), por lo que también trabajamos con municipalidades, gobiernos regionales y ministerios.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+
+<div class="rv lift" style="background: #FFFFFF; border-radius: 18px; padding: 22px; display: flex; align-items: center; gap: 16px;">
+<span class="ico" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: #EAF2FE; color: #1E6FE0; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="1"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"></path></svg></span>
+<span style="font-weight: 700; font-size: 16px; color: #0A2463;">Edificios y condominios</span>
+</div>
+
+<div class="rv lift" style="background: #FFFFFF; border-radius: 18px; padding: 22px; display: flex; align-items: center; gap: 16px;">
+<span class="ico" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: #EAF2FE; color: #1E6FE0; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V21h14V9.5"></path><path d="M10 21v-6h4v6"></path></svg></span>
+<span style="font-weight: 700; font-size: 16px; color: #0A2463;">Residencias grandes o de campo</span>
+</div>
+
+<div class="rv lift" style="background: #FFFFFF; border-radius: 18px; padding: 22px; display: flex; align-items: center; gap: 16px;">
+<span class="ico" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: #EAF2FE; color: #1E6FE0; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"></path><path d="M3 9h18v1a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"></path><path d="M5 13v8h14v-8"></path></svg></span>
+<span style="font-weight: 700; font-size: 16px; color: #0A2463;">Centros comerciales y autoservicios</span>
+</div>
+
+<div class="rv lift" style="background: #FFFFFF; border-radius: 18px; padding: 22px; display: flex; align-items: center; gap: 16px;">
+<span class="ico" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: #EAF2FE; color: #1E6FE0; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M12 8v8M8 12h8"></path></svg></span>
+<span style="font-weight: 700; font-size: 16px; color: #0A2463;">Clínicas y hospitales</span>
+</div>
+
+<div class="rv lift" style="background: #FFFFFF; border-radius: 18px; padding: 22px; display: flex; align-items: center; gap: 16px;">
+<span class="ico" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: #EAF2FE; color: #1E6FE0; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c2 2 10 2 12 0v-5"></path><path d="M22 9v6"></path></svg></span>
+<span style="font-weight: 700; font-size: 16px; color: #0A2463;">Escuelas y universidades</span>
+</div>
+
+<div class="rv lift" style="background: #FFFFFF; border-radius: 18px; padding: 22px; display: flex; align-items: center; gap: 16px;">
+<span class="ico" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: #EAF2FE; color: #1E6FE0; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21V10l6 4V10l6 4V6l8 4v11z"></path><path d="M6 17h2M11 17h2M16 17h2"></path></svg></span>
+<span style="font-weight: 700; font-size: 16px; color: #0A2463;">Almacenes y plantas industriales</span>
+</div>
+
+<div class="rv lift" style="background: #FFFFFF; border-radius: 18px; padding: 22px; display: flex; align-items: center; gap: 16px;">
+<span class="ico" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: #EAF2FE; color: #1E6FE0; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M4 10h16"></path><path d="M12 3l9 5H3z"></path><path d="M6 10v8M10 10v8M14 10v8M18 10v8"></path></svg></span>
+<span style="font-weight: 700; font-size: 16px; color: #0A2463;">Municipalidades y regiones</span>
+</div>
+
+<div class="rv lift" style="background: #FFFFFF; border-radius: 18px; padding: 22px; display: flex; align-items: center; gap: 16px;">
+<span class="ico" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: #EAF2FE; color: #1E6FE0; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V3"></path><path d="M5 4h12l-2 4 2 4H5"></path></svg></span>
+<span style="font-weight: 700; font-size: 16px; color: #0A2463;">Ministerios y entidades del Estado</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="porque" class="gridbg" style="position: relative; background-color: #071A3D; color: #FFFFFF; overflow: hidden;">
+<div class="drift" aria-hidden="true" style="position: absolute; top: 40px; left: -140px; width: 300px; height: 60px; background: #1E6FE0; opacity: .7;"></div>
+<div class="drift2" aria-hidden="true" style="position: absolute; bottom: -40px; right: -120px; width: 420px; height: 180px; background: #0F3F8C;"></div>
+<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+<div class="rv" style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 18px;">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: .2em; color: #5FA0FF;">POR QUÉ ELEGIRNOS</span>
+<h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: clamp(28px, 3vw, 42px); line-height: 1.1; letter-spacing: -.01em; color: #FFFFFF;">Supervisión <span style="color: #F5B83D;">profesional</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #B9CBEA;">Nuestro equipo de arquitecto, ingenieros y técnicos especializados supervisa cada servicio para optimizar tiempos y asegurar la calidad del resultado.</p>
+<div class="zoomwrap" style="position: relative; height: 220px; border-radius: 22px; overflow: hidden; border: 1px solid rgba(255,255,255,.16); margin-top: 6px;">
+<img class="zoomimg" src="img/arquitecto.jpg" alt="Profesional revisando planos de arquitectura" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span style="position: absolute; left: 14px; bottom: 14px; background: rgba(7,26,61,.85); color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 10px;">Expedientes técnicos y planos</span>
+</div>
+<a class="btn" href="#contacto" style="align-self: flex-start; margin-top: 8px; display: inline-flex; align-items: center; gap: 10px; background: #F5B83D; color: #071A3D; text-decoration: none; font-weight: 800; padding: 16px 26px; border-radius: 14px;">Hablemos de tu proyecto</a>
+</div>
+<div style="flex: 1 1 520px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+<div class="rv lift" style="background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+<span class="ico" style="width: 50px; height: 50px; border-radius: 14px; background: rgba(95,160,255,.18); color: #8DBBFF; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"></circle><path d="M3 21v-2a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v2"></path><path d="M16 4a3 3 0 0 1 0 6M21 21v-2a4 4 0 0 0-3-3.9"></path></svg></span>
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 20px; font-weight: 800;">Equipo especializado</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B9CBEA;">Arquitecto, ingenieros y técnicos en cada campo y actividad.</p>
+</div>
+<div class="rv lift" style="background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+<span class="ico" style="width: 50px; height: 50px; border-radius: 14px; background: rgba(95,160,255,.18); color: #8DBBFF; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 20px; font-weight: 800;">Seguridad y normativa</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B9CBEA;">Autorizaciones, normas de seguridad y protocolos según el marco legal vigente.</p>
+</div>
+<div class="rv lift" style="background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+<span class="ico" style="width: 50px; height: 50px; border-radius: 14px; background: rgba(95,160,255,.18); color: #8DBBFF; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg></span>
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 20px; font-weight: 800;">Registro OSCE</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B9CBEA;">Habilitados para atender contrataciones públicas además del sector privado.</p>
+</div>
+<div class="rv lift" style="background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+<span class="ico" style="width: 50px; height: 50px; border-radius: 14px; background: rgba(95,160,255,.18); color: #8DBBFF; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"></path></svg></span>
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 20px; font-weight: 800;">Alcance nacional</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B9CBEA;">Asesoría integral para distintas actividades económicas en todo el Perú.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px; display: flex; flex-direction: column; gap: 36px;">
+<div class="rv" style="display: flex; flex-direction: column; gap: 14px; max-width: 680px;">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: .2em; color: #1E6FE0;">EN 4 PASOS</span>
+<h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -.02em;"><span style="color: #111111;">Cómo <span style="color: #1E6FE0;">trabajamos</span></span></h2>
+</div>
+<div style="position: relative;">
+<svg aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1000 10" style="position: absolute; left: 4%; right: 4%; top: 31px; width: 92%; height: 10px;"><line class="flow" x1="0" y1="5" x2="1000" y2="5" stroke="#9BB0D3" stroke-width="2"></line></svg>
+<div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px;">
+<div class="rv" style="display: flex; flex-direction: column; gap: 14px;">
+<span style="width: 64px; height: 64px; border-radius: 50%; background: #0A2463; color: #FFFFFF; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px #FFFFFF;">01</span>
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 20px; font-weight: 800; color: #0A2463;">Levantamiento de información</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4F5F78;">Visitamos y entendemos el requerimiento técnico de tu espacio.</p>
+</div>
+<div class="rv" style="display: flex; flex-direction: column; gap: 14px;">
+<span style="width: 64px; height: 64px; border-radius: 50%; background: #1E6FE0; color: #FFFFFF; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px #FFFFFF;">02</span>
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 20px; font-weight: 800; color: #0A2463;">Presupuesto y planos</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4F5F78;">Preparamos la propuesta, el expediente técnico y los planos necesarios.</p>
+</div>
+<div class="rv" style="display: flex; flex-direction: column; gap: 14px;">
+<span style="width: 64px; height: 64px; border-radius: 50%; background: #1E6FE0; color: #FFFFFF; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px #FFFFFF;">03</span>
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 20px; font-weight: 800; color: #0A2463;">Ejecución supervisada</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4F5F78;">Nuestros profesionales dirigen el trabajo con protocolos de seguridad.</p>
+</div>
+<div class="rv" style="display: flex; flex-direction: column; gap: 14px;">
+<span style="width: 64px; height: 64px; border-radius: 50%; background: #F5B83D; color: #071A3D; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px #FFFFFF;">04</span>
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 20px; font-weight: 800; color: #0A2463;">Entrega conforme</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4F5F78;">Cerramos el servicio cumpliendo tiempos y estándares de calidad.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" style="background: #F3F6FB;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px; display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch;">
+<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: .2em; color: #1E6FE0;">ESCRÍBENOS</span>
+<h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -.02em;"><span style="color: #111111;">Cotiza tu <span style="color: #1E6FE0;">servicio</span></span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4F5F78;">Escríbenos para un levantamiento de información, un requerimiento o un presupuesto. Te respondemos por WhatsApp.</p>
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 4px;">
+<a class="lift" href="https://wa.me/51947261625" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 14px; background: #FFFFFF; border-radius: 16px; padding: 14px 18px; text-decoration: none; color: #0A2463; font-weight: 700; font-size: 17px;"><span class="ico" style="width: 44px; height: 44px; border-radius: 12px; background: #E6F8EE; color: #128C4A; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5z"></path></svg></span>947 261 625</a>
+<a class="lift" href="https://wa.me/51946340237" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 14px; background: #FFFFFF; border-radius: 16px; padding: 14px 18px; text-decoration: none; color: #0A2463; font-weight: 700; font-size: 17px;"><span class="ico" style="width: 44px; height: 44px; border-radius: 12px; background: #E6F8EE; color: #128C4A; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5z"></path></svg></span>946 340 237</a>
+<a class="lift" href="https://wa.me/51982376938" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 14px; background: #FFFFFF; border-radius: 16px; padding: 14px 18px; text-decoration: none; color: #0A2463; font-weight: 700; font-size: 17px;"><span class="ico" style="width: 44px; height: 44px; border-radius: 12px; background: #E6F8EE; color: #128C4A; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5z"></path></svg></span>982 376 938</a>
+<a class="lift" href="mailto:zeforakercorp@gmail.com" style="display: flex; align-items: center; gap: 14px; background: #FFFFFF; border-radius: 16px; padding: 14px 18px; text-decoration: none; color: #0A2463; font-weight: 700; font-size: 17px;"><span class="ico" style="width: 44px; height: 44px; border-radius: 12px; background: #EAF2FE; color: #1E6FE0; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span>zeforakercorp@gmail.com</a>
+<div style="display: flex; align-items: center; gap: 14px; padding: 6px 18px; color: #4F5F78; font-weight: 600; font-size: 15px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E6FE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Oficina: Los Eucaliptos 226, Lima - Perú</div>
+</div>
+</div>
+
+<form aria-label="Solicitar presupuesto" style="flex: 1 1 460px; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEEC; border-top: 5px solid #1E6FE0; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 8px 24px -14px rgba(10,36,99,.25);">
+<h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 24px; color: #0A2463;">Solicitar presupuesto</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700; color: #0A2463;">Nombre
+<input class="field" type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" style="font: inherit; font-weight: 500; font-size: 15px; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #D5DEEC; color: #0B1B3A; background: #FFFFFF;">
+</label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700; color: #0A2463;">Empresa o entidad
+<input class="field" type="text" id="f-empresa" name="empresa" placeholder="Opcional" style="font: inherit; font-weight: 500; font-size: 15px; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #D5DEEC; color: #0B1B3A; background: #FFFFFF;">
+</label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700; color: #0A2463;">Servicio de interés
+<select class="field" id="f-servicio" name="servicio" style="font: inherit; font-weight: 500; font-size: 15px; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #D5DEEC; color: #0B1B3A; background: #FFFFFF;">
+<option value="Remodelación de tiendas">Remodelación de tiendas</option>
+<option value="Electricidad industrial">Electricidad industrial</option>
+<option value="Aire acondicionado">Aire acondicionado</option>
+<option value="Estructuras metálicas">Estructuras metálicas</option>
+<option value="Albañilería y acabados enchapados">Albañilería y acabados enchapados</option>
+<option value="Mantenimiento de piscinas">Mantenimiento de piscinas</option>
+<option value="Recarga de extintores">Recarga de extintores</option>
+<option value="Fumigación">Fumigación</option>
+<option value="Mantenimiento de bombas y limpieza de tanques">Mantenimiento de bombas y limpieza de tanques</option>
+<option value="Instalaciones sanitarias">Instalaciones sanitarias</option>
+<option value="Sistemas drywall">Sistemas drywall</option>
+<option value="Carpintería, tabiquería y estructuras">Carpintería, tabiquería y estructuras</option>
+<option value="Fabricación de muebles en melamine">Fabricación de muebles en melamine</option>
+<option value="Pintura en general">Pintura en general</option>
+<option value="Mantenimiento y señalización de vías">Mantenimiento y señalización de vías</option>
+<option value="Limpieza de techos y almacenes">Limpieza de techos y almacenes</option>
+<option value="Jardinería y ornato">Jardinería y ornato</option>
+<option value="Transporte de desmonte">Transporte de desmonte</option>
+<option value="Otro servicio">Otro servicio</option>
+
+</select>
+</label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700; color: #0A2463;">Detalle del requerimiento
+<textarea class="field" rows="4" id="f-detalle" name="detalle" placeholder="Ubicación, metraje, plazos…" style="font: inherit; font-weight: 500; font-size: 15px; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #D5DEEC; color: #0B1B3A; background: #FFFFFF; resize: vertical;"></textarea>
+</label>
+<a class="btn" id="btn-wa" href="https://wa.me/51947261625" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 12px; background: #128C4A; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 17px; padding: 18px 24px; border-radius: 14px;">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5z"></path></svg>
+Enviar por WhatsApp</a>
+<p style="margin: 0; font-size: 13px; color: #4F5F78; text-align: center;">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #050F26; color: #B9CBEA;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 36px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; align-items: flex-start;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 340px;">
+<span style="display: flex; align-items: center; gap: 12px;"><img src="img/logo-zeforaker.png" alt="" style="width: 64px; height: auto; display: block; filter: brightness(0) invert(1);"><span style="display: flex; flex-direction: column; line-height: 1;"><span style="font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: .02em; color: #FFFFFF;">ZEFORAKER SERVICE</span><span style="font-size: 11px; font-weight: 700; letter-spacing: .3em; color: #FFFFFF; margin-top: 6px;">SERVICIOS GENERALES</span></span></span>
+<p style="margin: 0; font-size: 14px; line-height: 1.6;">Servicios generales para los sectores comercial, industrial y público en todo el Perú.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+<span style="font-weight: 800; color: #FFFFFF; letter-spacing: .12em; font-size: 12px;">NAVEGACIÓN</span>
+<a href="#servicios" style="color: #B9CBEA; text-decoration: none;">Servicios</a>
+<a href="#sectores" style="color: #B9CBEA; text-decoration: none;">Sectores</a>
+<a href="#nosotros" style="color: #B9CBEA; text-decoration: none;">Nosotros</a>
+<a href="#contacto" style="color: #B9CBEA; text-decoration: none;">Contacto</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+<span style="font-weight: 800; color: #FFFFFF; letter-spacing: .12em; font-size: 12px;">CONTACTO</span>
+<span>Los Eucaliptos 226, Lima - Perú</span>
+<span>947 261 625 · 946 340 237 · 982 376 938</span>
+<a href="mailto:zeforakercorp@gmail.com" style="color: #B9CBEA;">zeforakercorp@gmail.com</a>
+</div>
+</div>
+<div style="border-top: 1px solid rgba(255,255,255,.1);">
+<div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; font-size: 13px; color: #8EA3C7;">© 2026 Zeforaker Service · Servicios Generales</div>
+</div>
+</footer>
+
+<!-- floating WhatsApp -->
+<a class="pulse" href="https://wa.me/51947261625" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" style="position: fixed; right: 22px; bottom: 22px; z-index: 60; width: 62px; height: 62px; border-radius: 50%; background: #25D366; color: #FFFFFF; display: flex; align-items: center; justify-content: center;">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-.9-.4-1.6-1.1-2-2l.8-1-1-2z"></path></svg>
+</a>
+
+</div>
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tab[data-cat]');
+  var cards=document.querySelectorAll('#grid-servicios .svc');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      var c=t.getAttribute('data-cat');
+      tabs.forEach(function(o){var on=o===t;o.classList.toggle('on',on);o.setAttribute('aria-selected',on?'true':'false');});
+      cards.forEach(function(card){card.hidden=!(c==='Todos'||card.getAttribute('data-cat')===c);});
+    });
+  });
+  var $=function(id){return document.getElementById(id);};
+  var btn=$('btn-wa');
+  function update(){
+    var n=$('f-nombre').value.trim(), e=$('f-empresa').value.trim(), s=$('f-servicio').value, d=$('f-detalle').value.trim();
+    var txt='Hola ZEFORAKER SERVICE'+(n?', soy '+n:'')+(e?' de '+e:'')+'. Quisiera un presupuesto para: '+s+'.'+(d?' Detalle: '+d:'');
+    btn.href='https://wa.me/51947261625?text='+encodeURIComponent(txt);
+  }
+  ['f-nombre','f-empresa','f-servicio','f-detalle'].forEach(function(id){$(id).addEventListener('input',update);$(id).addEventListener('change',update);});
+  update();
+  document.querySelector('form[aria-label="Solicitar presupuesto"]').addEventListener('submit',function(ev){ev.preventDefault();update();window.open(btn.href,'_blank','noopener');});
+})();
+</script>
+</body>
+</html>
